@@ -41,9 +41,9 @@ public class ListFiles
 
 			for(String name:fileList)
 			{
-				StringBuilder pad = new StringBuilder().append(filename.toString()).append(name);
+				StringBuilder path = new StringBuilder().append(filename.toString()).append(name);
 				//add each path to row 'i' of the MultiDimensional Array
-				arrayList.get(i).add(pad.toString());
+				arrayList.get(i).add(path.toString());
 			}
 		}
 		System.out.println(arrayList);
