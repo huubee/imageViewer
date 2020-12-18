@@ -27,6 +27,11 @@ public class ListFiles
 			File filename = dirs[i];
 			System.out.println("subdir " + j + " " + filename.toString());
 			//create a new row in the multidimensional ArrayList 'arrayList'
+
+			/*
+			FIXME
+				 Explicit type argument ArrayList<String> can be replaced with <>
+			 */
 			arrayList.add(new ArrayList<String>());
 			//Loop through the 'dirs' Array
 			File file = new File(String.valueOf(dirs[i]));
@@ -36,14 +41,14 @@ public class ListFiles
 			// to construct the full pathname for each file in the subdirectorie
 			/*
 			FIXME
-				Dereference of 'fileList' may produce 'NullPointerException' :44
+				Dereference of 'fileList' may produce 'NullPointerException' :47
 			 */
 
 			for(String name:fileList)
 			{
-				StringBuilder pad = new StringBuilder().append(filename.toString()).append(name);
+				StringBuilder path = new StringBuilder().append(filename.toString()).append(name);
 				//add each path to row 'i' of the MultiDimensional Array
-				arrayList.get(i).add(pad.toString());
+				arrayList.get(i).add(path.toString());
 			}
 		}
 		System.out.println(arrayList);
